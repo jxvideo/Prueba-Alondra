@@ -40,7 +40,7 @@ function tomarFoto() {
     const ctx = canvas.getContext('2d');
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     canvas.toBlob(blob => {
-      const file = new File([blob], `photo${fotoCount + 1}.png`, { type: 'image/png' });
+      const file = new File([blob], `foto${fotoCount + 1}.png`, { type: 'image/png' });
       const dt = new DataTransfer();
       dt.items.add(file);
       photoInputs[fotoCount].files = dt.files;
